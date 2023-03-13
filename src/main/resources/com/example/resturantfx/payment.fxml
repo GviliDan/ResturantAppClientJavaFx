@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="803.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.resturantfx.PaymentController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="613.0" layoutX="-13.0" layoutY="-12.0" stroke="BLACK" strokeType="INSIDE" width="823.0">
+         <fill>
+            <LinearGradient cycleMethod="REFLECT" endX="0.4691943127962086" endY="0.5687203791469194" startX="0.4691943127962085">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9342105388641357" green="0.8311302065849304" blue="0.37195420265197754" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9078947305679321" green="0.8994883298873901" blue="0.8448464870452881" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4dbbe" height="130.0" layoutX="513.0" layoutY="437.0" stroke="BLACK" strokeType="INSIDE" width="283.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4dbbe" height="210.0" layoutX="183.0" layoutY="195.0" stroke="BLACK" strokeType="INSIDE" width="361.0" />
+      <Button layoutX="216.0" layoutY="127.0" mnemonicParsing="false" onAction="#pay" prefHeight="36.0" prefWidth="142.0" text="Pay">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button layoutX="632.0" layoutY="456.0" mnemonicParsing="false" onAction="#add_Tip_by_dollar" prefHeight="36.0" prefWidth="150.0" text="Add tip by dollars">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="addTipbtn" layoutX="632.0" layoutY="510.0" mnemonicParsing="false" onAction="#add_Tip_by_precent" prefHeight="36.0" prefWidth="150.0" text="Add tip by precent">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="40.0" layoutY="485.0" mnemonicParsing="false" onAction="#backToOrderPage" prefHeight="67.0" prefWidth="190.0" text="Back to order page">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tfPay" layoutX="387.0" layoutY="126.0" prefHeight="40.0" prefWidth="135.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="tfAddTipPrecent" layoutX="541.0" layoutY="510.0" prefHeight="36.0" prefWidth="77.0" />
+      <TextField fx:id="tfAddTipDollar" layoutX="540.0" layoutY="456.0" prefHeight="36.0" prefWidth="78.0" />
+      <VBox layoutX="242.0" layoutY="209.0" prefHeight="194.0" prefWidth="150.0">
+         <children>
+            <Label prefHeight="44.0" prefWidth="154.0" text="Total amount :">
+               <font>
+                  <Font name="Gisha Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="44.0" prefWidth="161.0" text="Total payment :">
+               <font>
+                  <Font name="Gisha Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="44.0" prefWidth="175.0" text="Left payment : ">
+               <font>
+                  <Font name="Gisha Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="44.0" prefWidth="208.0" text="Tip:">
+               <font>
+                  <Font name="Gisha Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="418.0" layoutY="209.0" prefHeight="194.0" prefWidth="135.0">
+         <children>
+            <Label fx:id="totalAmountLabel" prefHeight="44.0" prefWidth="110.0" text="Label">
+               <font>
+                  <Font name="Gisha Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalPaymentLabel" prefHeight="44.0" prefWidth="110.0" text="Label">
+               <font>
+                  <Font name="Gisha Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="LeftPaymentLabel" prefHeight="44.0" prefWidth="110.0" text="Label">
+               <font>
+                  <Font name="Gisha Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="tipLabel" prefHeight="44.0" prefWidth="110.0" text="Label">
+               <font>
+                  <Font name="Gisha Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label fx:id="tableNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="273.0" layoutY="23.0" prefHeight="67.0" prefWidth="190.0" text="Table #" textAlignment="CENTER">
+         <font>
+            <Font name="Gisha Bold" size="32.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
